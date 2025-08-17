@@ -5,7 +5,8 @@ from graphene_django import DjangoObjectType
 from django.core.exceptions import ValidationError
 from django.db import transaction
 from django.utils import timezone
-
+from graphene_django.filter import DjangoFilterConnectionField
+from .filters import CustomerFilter, ProductFilter, OrderFilter
 from .models import Customer, Product, Order
 
 # === TYPES ===
